@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Emoji Timer</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .last-updated {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy - Emoji Timer</h1>
+    <p class="last-updated">Last updated: <span id="current-date"></span></p>
+
+    <h2>1. General Information</h2>
+    <p>This Privacy Policy describes how the "Emoji Timer" extension collects, uses, and protects your information when you use our Chrome extension.</p>
+
+    <h2>2. Information Collected</h2>
+    <p>The Emoji Timer extension <strong>DOES NOT collect, store, or transmit</strong> any personal information to our servers. All extension functionality operates locally in your browser.</p>
+    
+    <h3>2.1 Locally Stored Data</h3>
+    <p>The extension may store the following information only in your local browser (using the Chrome Storage API):</p>
+    <ul>
+        <li>Custom timer settings (time intervals and emojis)</li>
+        <li>Timer size preferences</li>
+        <li>Elapsed time of timers</li>
+    </ul>
+    <p>This data remains exclusively on your device and is not shared with third parties.</p>
+
+    <h2>3. Permissions Used</h2>
+    <p>The extension requests the following permissions:</p>
+    <ul>
+        <li><strong>activeTab</strong>: To inject the timer into the active tab</li>
+        <li><strong>scripting</strong>: To execute the timer code on the page</li>
+        <li><strong>storage</strong>: To save your settings locally</li>
+    </ul>
+    <p>None of these permissions are used to collect personal data or browsing information.</p>
+
+    <h2>4. Use of Information</h2>
+    <p>Since we do not collect personal information, there is no data to use, share, or sell. The extension operates entirely offline and locally.</p>
+
+    <h2>5. Information Sharing</h2>
+    <p>We do not share, sell, or disclose your personal information to third parties, as we do not collect any personal information.</p>
+
+    <h2>6. Security</h2>
+    <p>Although we do not collect personal data, we implement appropriate security measures to protect any information stored locally in your browser.</p>
+
+    <h2>7. Cookies and Similar Technologies</h2>
+    <p>The extension does not use cookies or similar tracking technologies.</p>
+
+    <h2>8. Changes to this Policy</h2>
+    <p>We may update this Privacy Policy occasionally. We recommend that you review this page periodically to stay informed about our privacy practices.</p>
+
+    <h2>9. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+        <li>Access data stored locally by the extension</li>
+        <li>Modify or delete extension settings</li>
+        <li>Uninstall the extension at any time</li>
+    </ul>
+
+    <h2>10. Contact</h2>
+    <div class="contact-info">
+        <p>If you have questions about this Privacy Policy, please contact us through:</p>
+        <p><strong>Email:</strong> contact@artur.me</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/arturhaddad/emoji-timer">https://github.com/arturhaddad/emoji-timer</a></p>
+    </div>
+
+    <script>
+        // Updates the date automatically
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US');
+    </script>
+</body>
+</html>

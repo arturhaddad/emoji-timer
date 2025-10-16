@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Timer</title>
+    <style>
+      body{font:14px/1.3 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;padding:10px;min-width:280px}
+      .row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+      button{padding:8px 10px;border-radius:10px;border:1px solid #e5e7eb;background:#fafafa;cursor:pointer}
+      button:hover{background:#f3f4f6}
+      button:disabled{opacity:.5;cursor:not-allowed}
+      /* Save: gray border when disabled; green when enabled */
+      .btn-primary{border-color:#e5e7eb}
+      .btn-primary:not(:disabled){background:#10b981;color:#fff;border-color:#059669}
+      /* Add time: blue */
+      .btn-secondary{background:#3b82f6;color:#fff;border-color:#2563eb}
+      .btn-secondary:hover{background:#2563eb}
+      .steps{display:grid;grid-template-columns:100px 1fr auto;gap:6px;align-items:center}
+      input[type="text"], select{padding:6px 8px;border-radius:8px;border:1px solid #e5e7eb;width:100%}
+      .size-btn{flex:1;padding:8px 12px;border-radius:8px;border:1px solid #e5e7eb;background:#fafafa;cursor:pointer;font-size:14px}
+      .size-btn:hover{background:#f3f4f6}
+      .size-btn.active{background:#6b7280;color:#fff;border-color:#4b5563}
+      .icon{width:28px;height:28px;border-radius:8px;border:1px solid #e5e7eb;display:grid;place-items:center;background:#fff;cursor:pointer}
+      .danger{border-color:#fecaca;background:#fff1f2}
+      .disabled{background:#f9fafb;color:#6b7280}
+      .icon.disabled{background:#f3f4f6;border-color:#e5e7eb;color:#9ca3af;cursor:not-allowed}
+      .full{width:100%}
+      .add-margin{margin:5px 0}
+      .grow{flex:1}
+      /* Current time box */
+      .box{border:1px solid #e5e7eb;border-radius:12px;padding:10px;margin-top:8px}
+      .box-title{font-size:12px;color:#6b7280;margin:0 0 8px}
+    </style>
+  </head>
+  <body>
+    <!-- Show/Hide full width -->
+    <div class="row">
+      <button id="toggle" class="full">Loading…</button>
+    </div>
+
+    <!-- Times config button -->
+    <div class="row">
+      <button id="timesConfig" class="full">Times config</button>
+    </div>
+
+    <!-- Steps (hidden by default) -->
+    <div class="steps" id="steps" style="display: none;"></div>
+
+    <div class="row add-margin" id="addStepRow" style="display: none;">
+      <button id="addStep" class="full btn-secondary">Add time</button>
+    </div>
+
+    <!-- Reset configs and Save (hidden by default) -->
+    <div class="row" id="saveBtnRow" style="display: none;">
+      <button id="resetConfigs">Reset times</button>
+      <button id="saveBtn" class="grow btn-primary" disabled>Save</button>
+    </div>
+
+    <!-- Size box -->
+    <div class="box">
+      <p class="box-title">Size</p>
+      <div class="row">
+        <button id="sizeSmall" class="size-btn" data-size="sm">Small</button>
+        <button id="sizeLarge" class="size-btn" data-size="lg">Large</button>
+      </div>
+    </div>
+
+    <!-- Current time box AFTER Save -->
+    <div class="box">
+      <p class="box-title">Current time</p>
+      <div class="row">
+        <input id="elapsed" class="grow" type="text" placeholder="mm:ss (e.g., 04:30)" />
+        <button id="setElapsed">Set</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

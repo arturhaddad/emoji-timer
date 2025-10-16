@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Emoji Timer",
+  "version": "1.0.0",
+  "description": "Inject a timer with emoji into the current page when you click the icon.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "action": {
+    "default_title": "⏰ Emoji Timer",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  }
+}
